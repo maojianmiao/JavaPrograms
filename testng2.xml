@@ -3,7 +3,7 @@
   <test name="Test" parallel="tests" thread-count="2">
   <parameter name="num" value="2"></parameter>
     <classes>
-      <class name="test.parallel">
+      <class name="test.parallelTest">
       </class>
     </classes>
   </test> <!-- Test -->

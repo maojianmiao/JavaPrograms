@@ -8,12 +8,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class parallel {
+public class parallelTest {
   WebDriver driver;
 
-  
-  @BeforeTest
   @Parameters("num")
+  @BeforeTest
   public void setUp(int num) {
 	  if (num == 1) {
 		  driver = new FirefoxDriver();
