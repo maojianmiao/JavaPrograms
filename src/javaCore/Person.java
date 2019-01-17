@@ -1,15 +1,33 @@
 package javaCore;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Map;
 
-public class Person {
+public class Person implements Serializable{
 	
 	private String name;
 	private boolean sex;
+	private int age;
+	private double height;
+	
+	
+	private List<Person> persons;
+	private Person[] arraypersons;
+	private Map mappersons;
 	
 	public Person(String n){
 		this.name = n;
 	}
+	
+	public Person(String name,boolean sex,int age,double height) {
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+		this.height = height;
+	}
+	
 	public String getName(){
 		return name;
 	}
@@ -17,6 +35,32 @@ public class Person {
 	public boolean getSex(){
 		return sex;
 	}
+	
+	public void setPersons(List<Person> p) {
+		this.persons = p;
+	}
+	
+	public List<Person> getPerson(){
+		return this.persons;
+	}
+	
+	public void setArraypersons(Person[] p) {
+		this.arraypersons = p;
+	}
+	
+	public Person[] getArraypersons() {
+		return this.arraypersons;
+	}
+	
+	public void setMappersons(Map map) {
+		this.mappersons = map;
+	}
+	
+	public Map getMappersons() {
+		return this.mappersons;
+	}
+	
+	
 }
 
 class Employee extends Person implements Comparable<Employee>{

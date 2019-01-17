@@ -3,25 +3,38 @@ package dataStructure;
 
 
 public class Sorting {
+	
+	public static void main(String[] args) {
+		int[] a = {1,2};
+		BubbleSort(a);
+		printArray(a);
+	}
+	
+	public static void printArray(int[] a) {
+		for (int item:a) {
+			System.out.print(item +" ");
+		}
+	}
+	
 	static void BubbleSort(int[] a){
 		int i =0,j=0,tmp=0;
-		for (i=0;i<a.length-1;i++)
-			for (j=i+1;j<a.length;j++)
-				if (a[i] > a[j]){
-					tmp = a[i];
-					a[i] = a[j];
-					a[j] = tmp;
+		for (i=a.length-1;i>=0;i--)
+			for (j=0;j<i;j++)
+				if (a[j] > a[j+1]){
+					tmp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = tmp;
 				}
 	}
 	static void BubbleSort(String[] a){
 			int i =0,j=0;
 			String tmp="";
-			for (i=0;i<a.length-1;i++)
-				for (j=i+1;j<a.length;j++)
-					if (a[i].compareTo(a[j])>0){
-						tmp = a[i];
-						a[i] = a[j];
-						a[j] = tmp;
+			for (i=a.length-1;i>=0;i--)
+				for (j=0;j<i;j++)
+					if (a[j].compareTo(a[j+1])>0){
+						tmp = a[j];
+						a[j] = a[j+1];
+						a[j+1] = tmp;
 					}
 	}
 
