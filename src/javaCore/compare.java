@@ -29,8 +29,8 @@ public class compare {
 		p.setPersons(lp);
 		p.setArraypersons(ap);
 		p.setMappersons(mp);
-		
-		
-		System.out.println(JSON.toJSONString(p, SerializerFeature.DisableCircularReferenceDetect));
+		//关闭循环引用
+		String s = JSON.toJSONString(p, SerializerFeature.DisableCircularReferenceDetect);
+		System.out.println(s);
 	}
 }
