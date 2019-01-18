@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
-  <test name="Test(failed)" parallel="tests">
-    <parameter name="num" value="1"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="test.parallel">
+      <class name="javaCore.Compare">
         <methods>
-          <include name="f2"/>
-          <include name="setUp"/>
-          <include name="f1"/>
+          <include name="toJson"/>
         </methods>
-      </class> <!-- test.parallel -->
+      </class> <!-- javaCore.Compare -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
