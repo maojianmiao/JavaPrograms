@@ -4,13 +4,16 @@ import java.util.Map;
 
 
 public class CompareResult {
-	private int code;
-	private String message;
+	private int code=0;
+	private String message="";
 	private Map<String,String> details;
 	
 	public CompareResult(){
 	}
 	
+	public CompareResult(int code){
+		this.code = code;
+	}
 	public void setCode(int code){
 		this.code = code;
 	}
@@ -34,6 +37,12 @@ public class CompareResult {
 	public Map getMap(){
 		return this.details;
 	}
+    
+	public void addMessage(String msg){
+		this.message += msg;
+	}
 	
-	
+	public void addCode(){
+		this.code ++;
+	}
 }
